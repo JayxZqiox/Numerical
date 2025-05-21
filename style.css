@@ -1,0 +1,390 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: black; /* or #121212 */
+  color: #eee; /* light color for text */
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* NAVIGATION */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  background: #1f1f1f;
+  border-radius: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+}
+
+.left-nav a,
+.mid-nav a,
+.right-nav a {
+  color: #e0e0e0;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.left-nav a:hover,
+.mid-nav a:hover,
+.right-nav a:hover {
+  color: #00ffcc;
+}
+
+.mid-nav ion-icon {
+  font-size: 1.6rem;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.mid-nav a:hover ion-icon {
+  transform: scale(1.2);
+}
+
+.right-nav img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #00ffcc;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.right-nav img:hover {
+  transform: scale(1.1);
+}
+
+/* MAIN INTRO */
+.mid-info {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.mid-info .name {
+  font-size: 4rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #00ffcc;
+}
+
+.mid-info .name span {
+  color: #e0e0e0;
+  font-weight: 400;
+}
+
+.mid-info .work {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #a0a0a0;
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sec-des {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.sec-des-left {
+  flex: 1;
+}
+
+.sec-des-left h3 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #00ffcc;
+}
+
+.sec-des-left p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.sec-des img {
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,255,204,0.3);
+}
+
+/* SKILLS */
+#skills {
+  max-width: 600px;
+  margin: 0 auto 80px auto;
+}
+
+#skills h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #00ffcc;
+  text-align: center;
+}
+
+#skills ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+#skills li {
+  background: #222;
+  padding: 15px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #eee;
+  box-shadow: 0 3px 10px rgba(0,255,204,0.2);
+  transition: background-color 0.3s ease;
+  cursor: default;
+}
+
+#skills li:hover {
+  background-color: #00ffcc;
+  color: #121212;
+}
+
+#skills ion-icon {
+  font-size: 1.4rem;
+  color: #00ffcc;
+}
+
+/* EXPERIENCE */
+.exp-left p {
+  margin-bottom: 12px;
+  color: #ddd;
+}
+
+/* WORK & PROJECTS */
+.projects-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.projects-container h4 {
+  font-size: 1.7rem;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #00ffcc;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 20px;
+}
+
+.project {
+  background: #1f1f1f;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,255,204,0.15);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,255,204,0.35);
+}
+
+.project-info h4 {
+  margin-bottom: 10px;
+  color: #00ffcc;
+}
+
+.project-info a {
+  color: #00ffcc;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-info a:hover {
+  color: #e0e0e0;
+}
+
+.project-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 12px;
+  box-shadow: 0 5px 10px rgba(0,255,204,0.2);
+}
+
+/* CERTIFICATIONS */
+#certifications {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#certifications h3 {
+  color: #00ffcc;
+  margin-bottom: 20px;
+}
+
+#certifications ul {
+  list-style: none;
+  color: #ddd;
+  font-size: 1.1rem;
+}
+
+/* CONTACT */
+.contact {
+  background: #1f1f1f;
+  padding: 40px 20px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 0 auto 80px auto;
+  text-align: center;
+}
+
+.contact h2 {
+  color: #00ffcc;
+  margin-bottom: 30px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.contact-item ion-icon {
+  font-size: 1.8rem;
+  color: #00ffcc;
+}
+
+.contact-item:hover {
+  color: #00ffcc;
+}
+
+/* FOOTER */
+footer {
+  background: #121212;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid #333;
+  flex-wrap: wrap;
+}
+
+footer .left-nav a {
+  margin: 0 12px;
+  font-weight: 600;
+  color: #999;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+footer .left-nav a:hover {
+  color: #00ffcc;
+}
+
+footer .social-media a {
+  margin: 0 12px;
+  color: #999;
+  transition: color 0.3s ease;
+}
+
+footer .social-media a:hover {
+  color: #00ffcc;
+}
+
+footer .social-media ion-icon {
+  font-size: 1.5rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sec-des {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sec-des img {
+    max-width: 80%;
+    margin: 20px auto 0;
+  }
+
+  header nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .left-nav,
+  .mid-nav,
+  .right-nav {
+    display: flex;
+    justify-content: center;
+  }
+}
